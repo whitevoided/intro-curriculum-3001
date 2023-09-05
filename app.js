@@ -7,9 +7,25 @@
  */
 function factorial(n) {
   let result = 1;
-  // TODO このコメントを消して正しく実装してください。
+  for (let i = 1; i <= n; i++) {
+    result = i * result
+  }
   return result;
 }
+
+//if (factorial(1) != 1) {
+//  console.log(`1の階乗は1ですが、実際は${factorial(1) }でした`)
+//}
+//if (factorial(2) != 2) {
+//  console.log(`2の階乗は2ですが、実際は${factorial(2) }でした`)
+//}
+//if (factorial(3) != 6) {
+//  console.log(`3の階乗は6ですが、実際は${factorial(3) }でした`)
+//}
+//if (factorial(10) != 3628800) {
+//  console.log(`10の階乗は3628800ですが、実際は${factorial(10) }でした`)
+//}
+//console.log('すべてのテストを通過しました');
 const assert = require('node:assert');
 assert.strictEqual(factorial(1), 1, `1の階乗は1ですが、実際は${factorial(1) }でした`);
 assert.strictEqual(factorial(2), 2, `2の階乗は2ですが、実際は${factorial(2) }でした`);
